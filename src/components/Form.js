@@ -36,6 +36,15 @@ function Form() {
       />
 
       <TextField
+        id="outlined-name"
+        label="Tussenvoegsel"
+        className={classes.textField}
+        margin="normal"
+        variant="outlined"
+        type="text"
+      />
+
+      <TextField
         required
         id="outlined-required"
         label="Achternaam"
@@ -49,6 +58,24 @@ function Form() {
         required
         id="outlined-required"
         label="Postcode"
+        className={classes.textField}
+        margin="normal"
+        variant="outlined"
+        type="text"
+      />
+
+      <TextField
+        id="outlined-name"
+        label="Straatnaam"
+        className={classes.textField}
+        margin="normal"
+        variant="outlined"
+        type="text"
+      />
+
+      <TextField
+        id="outlined-name"
+        label="Stad"
         className={classes.textField}
         margin="normal"
         variant="outlined"
