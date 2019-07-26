@@ -26,9 +26,10 @@ function Form(props) {
           locationDetails } = props
 
   return (
-    <main className='form-container'>
+    <main className='main-container'>
+      
+      <form className='form-container' onSubmit={onSubmit}>
       <h1>Incentronauten Formulier</h1>
-      <form onSubmit={onSubmit}>
         <TextField
           required
           id="outlined-required"
@@ -125,7 +126,7 @@ function Form(props) {
           onChange={onChange}
         />
 
-        <input type="submit" value="Submit" />
+        <input className='button' type="submit" value="Submit" />
       </form>
 
     </main>
