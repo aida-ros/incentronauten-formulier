@@ -17,6 +17,12 @@ class FormContainer extends Component  {
     })
     console.log(this.state)
   }
+
+  onSubmit = (event) => {
+    event.preventDefault()
+    this.fetchAdress(this.state.postcode)
+    alert('Info sent!')
+  }
   
   fetchAdress = (event) => {
     const postcode = event
@@ -29,6 +35,7 @@ class FormContainer extends Component  {
         <Form
           fetchAdress={this.fetchAdress}
           onChange={this.onChange}
+          onSubmit={this.onSubmit}
           />
       </div>
     );

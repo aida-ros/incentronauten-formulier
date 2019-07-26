@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 
-function Form (props) {
+function Form(props) {
   const useStyles = makeStyles(theme => ({
     container: {
       display: 'flex',
@@ -21,12 +21,12 @@ function Form (props) {
   }));
   const classes = useStyles();
 
-  const { fetchAdress, onChange } = props
+  const { fetchAdress, onChange, onSubmit } = props
 
   return (
     <main className='form-container'>
       <h1>Incentronauten Formulier</h1>
-      <form>
+      <form onSubmit={onSubmit}>
         <TextField
           required
           id="outlined-required"
@@ -120,10 +120,12 @@ function Form (props) {
           name='email'
           onChange={onChange}
         />
+
+        <input type="submit" value="Submit"/>
       </form>
 
     </main>
-  );
-}
-
-export default Form;
+      );
+    }
+    
+    export default Form;
