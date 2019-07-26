@@ -21,7 +21,9 @@ function Form(props) {
   }));
   const classes = useStyles();
 
-  const { fetchAdress, onChange, onSubmit } = props
+  const { onChange,
+          onSubmit,
+          locationDetails } = props
 
   return (
     <main className='form-container'>
@@ -82,7 +84,8 @@ function Form(props) {
           variant="outlined"
           type="text"
           name='streetname'
-          onChange={onChange}
+          disabled={true}
+          value={locationDetails.name}
         />
 
         <TextField
@@ -93,7 +96,8 @@ function Form(props) {
           variant="outlined"
           type="text"
           name='city'
-          onChange={onChange}
+          disabled={true}
+          value={locationDetails.city}
         />
 
         <TextField
@@ -121,11 +125,11 @@ function Form(props) {
           onChange={onChange}
         />
 
-        <input type="submit" value="Submit"/>
+        <input type="submit" value="Submit" />
       </form>
 
     </main>
-      );
-    }
-    
-    export default Form;
+  );
+}
+
+export default Form;
