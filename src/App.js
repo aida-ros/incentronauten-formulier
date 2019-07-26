@@ -1,11 +1,12 @@
 import React from 'react';
 import './App.css';
+import FormContainer from './components/FormContainer'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Incentronauten Formulier</h1>
+        <FormContainer/>
       </header>
     </div>
   );
