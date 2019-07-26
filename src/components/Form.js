@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 
-function Form() {
+function Form (props) {
   const useStyles = makeStyles(theme => ({
     container: {
       display: 'flex',
@@ -21,87 +21,106 @@ function Form() {
   }));
   const classes = useStyles();
 
+  const { fetchAdress, onChange } = props
 
   return (
     <main className='form-container'>
       <h1>Incentronauten Formulier</h1>
-      <TextField
-        required
-        id="outlined-required"
-        label="Voorletters"
-        className={classes.textField}
-        margin="normal"
-        variant="outlined"
-        type="text"
-      />
+      <form>
+        <TextField
+          required
+          id="outlined-required"
+          label="Voorletters"
+          className={classes.textField}
+          margin="normal"
+          variant="outlined"
+          type="text"
+          name='firstName'
+          onChange={onChange}
+        />
 
-      <TextField
-        id="outlined-name"
-        label="Tussenvoegsel"
-        className={classes.textField}
-        margin="normal"
-        variant="outlined"
-        type="text"
-      />
+        <TextField
+          id="outlined-name"
+          label="Tussenvoegsel"
+          className={classes.textField}
+          margin="normal"
+          variant="outlined"
+          type="text"
+          name='additives'
+          onChange={onChange}
+        />
 
-      <TextField
-        required
-        id="outlined-required"
-        label="Achternaam"
-        className={classes.textField}
-        margin="normal"
-        variant="outlined"
-        type="text"
-      />
+        <TextField
+          required
+          id="outlined-required"
+          label="Achternaam"
+          className={classes.textField}
+          margin="normal"
+          variant="outlined"
+          type="text"
+          name='lastName'
+          onChange={onChange}
+        />
 
-      <TextField
-        required
-        id="outlined-required"
-        label="Postcode"
-        className={classes.textField}
-        margin="normal"
-        variant="outlined"
-        type="text"
-      />
+        <TextField
+          required
+          id="outlined-required"
+          label="Postcode"
+          className={classes.textField}
+          margin="normal"
+          variant="outlined"
+          type="text"
+          name='postcode'
+          onChange={onChange}
+        />
 
-      <TextField
-        id="outlined-name"
-        label="Straatnaam"
-        className={classes.textField}
-        margin="normal"
-        variant="outlined"
-        type="text"
-      />
+        <TextField
+          id="outlined-name"
+          label="Straatnaam"
+          className={classes.textField}
+          margin="normal"
+          variant="outlined"
+          type="text"
+          name='streetname'
+          onChange={onChange}
+        />
 
-      <TextField
-        id="outlined-name"
-        label="Stad"
-        className={classes.textField}
-        margin="normal"
-        variant="outlined"
-        type="text"
-      />
+        <TextField
+          id="outlined-name"
+          label="Stad"
+          className={classes.textField}
+          margin="normal"
+          variant="outlined"
+          type="text"
+          name='city'
+          onChange={onChange}
+        />
 
-      <TextField
-        required
-        id="outlined-required"
-        label="Huisnummer"
-        defaultValue="Huisnummer"
-        className={classes.textField}
-        margin="normal"
-        variant="outlined"
-        type="number"
-      />
+        <TextField
+          required
+          id="outlined-required"
+          label="Huisnummer"
+          defaultValue="Huisnummer"
+          className={classes.textField}
+          margin="normal"
+          variant="outlined"
+          type="number"
+          name='housenumber'
+          onChange={onChange}
+        />
 
-      <TextField
-        required
-        id="outlined-required"
-        label="E-mail adres"
-        className={classes.textField}
-        margin="normal"
-        variant="outlined"
-        type="email"
-      />
+        <TextField
+          required
+          id="outlined-required"
+          label="E-mail adres"
+          className={classes.textField}
+          margin="normal"
+          variant="outlined"
+          type="email"
+          name='email'
+          onChange={onChange}
+        />
+      </form>
 
     </main>
   );
