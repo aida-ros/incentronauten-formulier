@@ -30,12 +30,12 @@ class FormContainer extends Component  {
   fetchAdress = (event) => {
     const postcode = event
     fetch(`photon.komoot.de/api/?q=${postcode}`)
-      .then(res => res.text())
       .then(features => {
         const location = {
           city: features.properties.city,
           name: features.properties.city
         }
+        console.log('the location',location)
         return location
       })
       .then(location => {
