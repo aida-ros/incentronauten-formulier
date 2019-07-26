@@ -21,7 +21,7 @@ html {
 }
 
 .form-container {
-  background-color: #ffffffd5;
+  background-color: #ffffffea;
   min-height: 100vh;
   width: 780px;
   display: flex;
@@ -29,7 +29,7 @@ html {
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgba(255, 200, 112, 0.904);
 }
 
 .button {
